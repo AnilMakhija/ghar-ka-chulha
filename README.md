@@ -4,7 +4,7 @@ Welcome to my web project hosted on GitHub Pages!
 
 ## 🚀 Live Site
 Once configured, this project will be live at:
-* **Custom Domain:** `https://yourdomain.in`
+* **Custom Domain:** `https://gharkachulha.in`
 * **GitHub URL:** `https://github.io`
 
 ## 🛠️ Project Setup
