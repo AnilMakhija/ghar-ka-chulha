@@ -3,9 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>GHAR KA CHULHA | Authentic Rajasthani Dal Baati Churma</title>
-<meta name="description" content="Authentic homemade Rajasthani Dal Baati Churma made with traditional flavours and served with the warmth of ghar ka khana. ₹249 per plate.">
+<title>Rasodu Chulha | Authentic Rajasthani Dal Baati Churma</title>
+<meta name="description" content="Rasodu Chulha brings authentic homemade Rajasthani Dal Baati Churma, freshly prepared with traditional flavours. ₹249 per plate. Order via WhatsApp.">
 <meta name="keywords" content="Rajasthani food, Dal Baati Churma, Homemade Rajasthani food, Dal Baati, Homemade food, Authentic Indian food">
+<meta property="og:title" content="Rasodu Chulha | Authentic Rajasthani Dal Baati Churma">
+<meta property="og:description" content="Ghar Jaisa Swad, Dil Se Bana — authentic Rajasthani Dal Baati Churma at ₹249 per plate.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Rasodu Chulha | Authentic Rajasthani Dal Baati Churma">
+<meta name="twitter:description" content="Ghar Jaisa Swad, Dil Se Bana — authentic Rajasthani Dal Baati Churma at ₹249 per plate.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -84,34 +90,81 @@ section{padding:88px 0;}
 .wa-fab{position:fixed; right:18px; bottom:86px; z-index:59; width:56px; height:56px; border-radius:50%; background:#25D366; display:flex; align-items:center; justify-content:center; box-shadow:0 10px 24px -8px rgba(0,0,0,.4);}
 @media(min-width:900px){.wa-fab{bottom:26px;}}
 
-nav{position:sticky; top:0; z-index:70; backdrop-filter:blur(10px); background:rgba(248,242,231,.85); border-bottom:1px solid var(--line);}
+nav{position:sticky; top:0; z-index:70; backdrop-filter:blur(10px); background:rgba(248,242,231,.92); border-bottom:1px solid var(--line);}
+.nav-inner{display:flex; align-items:center; justify-content:space-between; padding:14px 24px;}
+.nav-links{display:none; gap:26px; font-size:14px; font-weight:500;}
+.nav-actions{display:flex; align-items:center; gap:10px;}
+.hamburger{background:none; border:none; font-size:22px; line-height:1; cursor:pointer; padding:8px; color:var(--brown); border-radius:8px;}
+.hamburger:active{background:var(--cream2);}
+.nav-mobile-panel{display:none; flex-direction:column; border-top:1px solid var(--line); background:var(--cream);}
+.nav-mobile-panel.open{display:flex;}
+.nav-mobile-panel a{padding:14px 24px; font-size:15px; font-weight:500; border-bottom:1px solid var(--line);}
+@media(min-width:860px){.nav-links{display:flex;} .hamburger{display:none;} .nav-mobile-panel{display:none !important;}}
+
+.hero-grid{display:grid; gap:30px; grid-template-areas:"top" "image" "info";}
+@media(min-width:860px){.hero-grid{grid-template-columns:1.1fr 1fr; align-items:center; gap:48px; grid-template-areas:"top image" "info image";}}
+.hero-top{grid-area:top;} .hero-image{grid-area:image;} .hero-info{grid-area:info;}
+
+.plate-chip.chip-primary{border-color:var(--terracotta); background:linear-gradient(180deg,#FBF0DD,var(--card));}
+.plate-chip.chip-primary h3{color:var(--terracotta-dk);}
+
+.price-big{margin:14px 0 20px;}
+.price-big .amt{font-size:52px; font-weight:600; font-family:'Fraunces',serif;}
+.price-big .unit{display:block; color:#8a725f; font-size:13px; letter-spacing:.3px;}
+.qty-row{display:flex; align-items:center; justify-content:center; gap:16px; margin:20px 0;}
+.included-list{list-style:none; padding:0; margin:0 0 6px; text-align:left; display:inline-block;}
+.included-list li{padding:6px 0; font-size:14.5px;}
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="wrap" style="display:flex; align-items:center; justify-content:space-between; padding:14px 24px;">
+  <div class="wrap nav-inner">
     <a href="#top" style="display:flex; align-items:center; gap:10px;">
-      <svg width="30" height="30" viewBox="0 0 40 40"><path d="M20 4c2 6-3 8-3 13a5 5 0 0010 0c0-3-1-4-1-6 3 2 5 6 5 10a11 11 0 11-22 0c0-8 7-11 11-17z" fill="var(--terracotta)"/></svg>
-      <span class="display" style="font-size:19px; font-weight:600;">Ghar Ka Chulha</span>
+      <svg width="30" height="30" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4c2 6-3 8-3 13a5 5 0 0010 0c0-3-1-4-1-6 3 2 5 6 5 10a11 11 0 11-22 0c0-8 7-11 11-17z" fill="var(--terracotta)"/></svg>
+      <span class="display" style="font-size:19px; font-weight:600;">Rasodu Chulha</span>
     </a>
-    <div style="display:flex; gap:26px; font-size:14px; font-weight:500;" class="hide-mobile">
-      <a href="#menu">Menu</a><a href="#story">Our Story</a><a href="#order-steps">Order</a>
+    <div class="nav-links">
+      <a href="#plate">Menu</a><a href="#story">Our Story</a><a href="#thali">Order</a>
     </div>
-    <button class="btn btn-primary" style="padding:10px 20px;" onclick="openModal()">Order Now</button>
+    <div class="nav-actions">
+      <button class="btn btn-primary" style="padding:10px 20px;" onclick="openModal()">Order Now</button>
+      <button class="hamburger" onclick="toggleNav()" aria-label="Open menu" aria-expanded="false" aria-controls="navMobilePanel">☰</button>
+    </div>
+  </div>
+  <div class="nav-mobile-panel" id="navMobilePanel">
+    <a href="#plate" onclick="closeNav()">Menu</a>
+    <a href="#story" onclick="closeNav()">Our Story</a>
+    <a href="#thali" onclick="closeNav()">Order</a>
   </div>
 </nav>
 
 <!-- HERO -->
-<header id="top" style="padding:56px 0 70px;">
-  <div class="wrap" style="display:grid; grid-template-columns:1fr; gap:48px; align-items:center;">
-    <div style="display:grid; grid-template-columns:1fr; gap:48px; align-items:center;" class="hero-grid">
-      <div>
+<header id="top" style="padding:48px 0 64px;">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-top">
         <p class="eyebrow">Homemade Rajasthani Kitchen</p>
-        <h1 class="display" style="font-size:clamp(36px,6vw,58px); line-height:1.05; font-weight:600; margin:10px 0 18px;">Ghar Jaisa Swad,<br>Dil Se Bana</h1>
-        <p style="font-size:17px; font-weight:600; color:var(--terracotta); margin:0 0 6px;">AUTHENTIC RAJASTHANI DAL BAATI CHURMA</p>
-        <p style="max-width:440px; color:#5c4636; line-height:1.6; margin-bottom:26px;">Crispy golden baatis, rich dal simmered slow, sweet churma and traditional accompaniments — made the way it's made at home.</p>
-        <div style="display:flex; align-items:baseline; gap:6px; margin-bottom:26px;">
+        <h1 class="display" style="font-size:clamp(34px,6vw,58px); line-height:1.05; font-weight:600; margin:10px 0 0;">Ghar Jaisa Swad,<br>Dil Se Bana</h1>
+      </div>
+      <div class="hero-image thali-wrap reveal in" role="img" aria-label="Rasodu Chulha authentic Rajasthani Dal Baati Churma thali with dal, baati, churma, garlic chutney, pickle, fresh salad and desi ghee">
+        <div class="plate">
+          <div class="bowl bowl-dal"></div>
+          <div class="baati b1"></div><div class="baati b2"></div><div class="baati b3"></div>
+          <div class="churma"></div>
+          <div class="dab chutney"></div>
+          <div class="dab pickle"></div>
+          <div class="dab salad" style="background:radial-gradient(circle at 35% 30%,#dff0b8,#7c9a52 70%); top:10%; left:14%;"></div>
+          <div class="dab ghee-bowl" style="background:radial-gradient(circle at 35% 30%,#fff6d9,#e9c05a 70%); bottom:32%; left:8%;"></div>
+          <div class="ghee"></div>
+          <div class="steam" style="left:44%; bottom:52%; height:22px;" aria-hidden="true"></div>
+          <div class="steam" style="left:50%; bottom:50%; height:16px; animation-delay:1s;" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="hero-info">
+        <p style="font-size:17px; font-weight:600; color:var(--terracotta); margin:14px 0 6px;">AUTHENTIC RAJASTHANI DAL BAATI CHURMA</p>
+        <p style="max-width:440px; color:#5c4636; line-height:1.6; margin-bottom:22px;">Crispy golden baatis, rich dal simmered slow, sweet churma and traditional accompaniments — made the way it's made at home.</p>
+        <div style="display:flex; align-items:baseline; gap:6px; margin-bottom:24px;">
           <span class="display" style="font-size:40px; font-weight:600;">₹249</span>
           <span style="color:#8a725f; font-weight:500;">/ plate</span>
         </div>
@@ -120,60 +173,25 @@ nav{position:sticky; top:0; z-index:70; backdrop-filter:blur(10px); background:r
           <a class="btn btn-outline" href="tel:6355538898">Call 6355538898</a>
         </div>
       </div>
-      <div class="thali-wrap reveal in">
-        <div class="plate">
-          <div class="bowl bowl-dal"></div>
-          <div class="baati b1"></div><div class="baati b2"></div><div class="baati b3"></div>
-          <div class="churma"></div>
-          <div class="dab chutney"></div>
-          <div class="dab pickle"></div>
-          <div class="ghee"></div>
-          <div class="steam" style="left:44%; bottom:52%; height:22px;"></div>
-          <div class="steam" style="left:50%; bottom:50%; height:16px; animation-delay:1s;"></div>
-        </div>
-      </div>
     </div>
   </div>
 </header>
-<style>@media(min-width:860px){.hero-grid{grid-template-columns:1.1fr 1fr;}}</style>
 
-<!-- FEATURED DISH -->
-<section id="menu" style="background:var(--cream2);">
+<!-- WHAT'S ON THE PLATE -->
+<section id="plate" style="background:var(--cream2);">
   <div class="wrap">
-    <p class="eyebrow" style="text-align:center;">Made Like Home</p>
-    <h2 class="display" style="text-align:center; font-size:clamp(28px,4vw,38px); font-weight:600; margin:10px 0 44px;">Traditional Rajasthani flavours, freshly prepared with love</h2>
-    <div class="card reveal" style="display:grid; grid-template-columns:1fr; overflow:hidden; max-width:820px; margin:0 auto;">
-      <div style="padding:36px;">
-        <div class="thali-wrap" style="max-width:200px; margin:0 0 20px;"><div class="plate"><div class="bowl bowl-dal"></div><div class="baati b1"></div><div class="baati b2"></div><div class="churma"></div><div class="dab chutney"></div></div></div>
-        <h3 class="display" style="font-size:26px; font-weight:600; margin:0 0 10px;">Dal Baati Churma</h3>
-        <p style="color:#5c4636; line-height:1.6; margin-bottom:20px;">Crispy golden baatis served with rich dal, sweet churma, garlic chutney, pickle and traditional accompaniments.</p>
-        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
-          <span class="display" style="font-size:24px; font-weight:600;">₹249 / Plate</span>
-          <button class="btn btn-primary" onclick="openModal()">Order Now</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <p class="eyebrow" style="text-align:center;">The Full Thali</p>
+    <h2 class="display" style="text-align:center; font-size:clamp(26px,4vw,36px); font-weight:600; margin:10px 0 10px;">What's on the Plate?</h2>
+    <p style="text-align:center; color:#5c4636; max-width:440px; margin:0 auto 40px;">Everything you need for a traditional Rajasthani meal.</p>
 
-<!-- FEATURES -->
-<section>
-  <div class="wrap" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:24px;">
-    <div class="card reveal" style="padding:28px;">
-      <svg class="icon" viewBox="0 0 24 24"><path d="M4 20V10a8 8 0 0116 0v10"/><path d="M4 20h16"/></svg>
-      <h3 style="font-size:17px; margin:14px 0 6px;">Homemade</h3><p style="font-size:14px; color:#5c4636;">Prepared with the warmth and care of a home kitchen.</p>
-    </div>
-    <div class="card reveal" style="padding:28px;">
-      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
-      <h3 style="font-size:17px; margin:14px 0 6px;">Authentic</h3><p style="font-size:14px; color:#5c4636;">Traditional Rajasthani flavours and recipes.</p>
-    </div>
-    <div class="card reveal" style="padding:28px;">
-      <svg class="icon" viewBox="0 0 24 24"><path d="M12 3v6M7 8l5-5 5 5"/><path d="M5 21h14"/></svg>
-      <h3 style="font-size:17px; margin:14px 0 6px;">Freshly Prepared</h3><p style="font-size:14px; color:#5c4636;">Made fresh for every order.</p>
-    </div>
-    <div class="card reveal" style="padding:28px;">
-      <svg class="icon" viewBox="0 0 24 24"><path d="M6 3c0 4 3 4 3 8a3 3 0 01-6 0c0-4 3-4 3-8zM16 2l1 5M12 2l1 8"/></svg>
-      <h3 style="font-size:17px; margin:14px 0 6px;">Full of Flavour</h3><p style="font-size:14px; color:#5c4636;">Generous portions and authentic ingredients.</p>
+    <div class="plate-grid">
+      <div class="plate-chip chip-primary reveal"><span class="chip-emoji" aria-hidden="true">🥣</span><h3>Dal</h3><p>Rich &amp; comforting</p></div>
+      <div class="plate-chip chip-primary reveal"><span class="chip-emoji" aria-hidden="true">🫓</span><h3>Baati</h3><p>Golden &amp; crispy</p></div>
+      <div class="plate-chip chip-primary reveal"><span class="chip-emoji" aria-hidden="true">🍯</span><h3>Churma</h3><p>Sweet &amp; aromatic</p></div>
+      <div class="plate-chip reveal"><span class="chip-emoji" aria-hidden="true">🌶️</span><h3>Garlic Chutney</h3><p>Bold &amp; traditional</p></div>
+      <div class="plate-chip reveal"><span class="chip-emoji" aria-hidden="true">🥭</span><h3>Pickle</h3><p>Classic Rajasthani touch</p></div>
+      <div class="plate-chip reveal"><span class="chip-emoji" aria-hidden="true">🥗</span><h3>Fresh Salad</h3><p>Crisp &amp; refreshing</p></div>
+      <div class="plate-chip reveal"><span class="chip-emoji" aria-hidden="true">🧈</span><h3>Desi Ghee</h3><p>Generously served</p></div>
     </div>
   </div>
 </section>
@@ -181,13 +199,13 @@ nav{position:sticky; top:0; z-index:70; backdrop-filter:blur(10px); background:r
 <!-- FROM OUR CHULHA -->
 <section class="chulha-pattern" style="background:var(--brown-dk); color:#f4e9d8;">
   <div class="wrap" style="display:grid; grid-template-columns:1fr; gap:40px; align-items:center;" id="chulhaGrid">
-    <div>
+    <div style="order:2;" class="chulha-text">
       <p class="eyebrow" style="color:var(--saffron);">From Our Chulha</p>
       <h2 class="display" style="font-size:clamp(26px,4vw,36px); font-weight:600; margin:10px 0 14px;">From Our Chulha To Your Plate</h2>
       <p style="color:#d8c6b0; line-height:1.7; max-width:460px;">Simple ingredients. Traditional recipes. The comfort of ghar ka khana — dal simmered slow, baatis baked till golden, churma ground fresh.</p>
     </div>
-    <div style="display:flex; align-items:center; justify-content:center;">
-      <svg width="220" height="220" viewBox="0 0 200 200">
+    <div style="display:flex; align-items:center; justify-content:center; order:1;" class="chulha-img">
+      <svg width="220" height="220" viewBox="0 0 200 200" role="img" aria-label="Illustration of a clay chulha with baati baking over the fire">
         <ellipse cx="100" cy="170" rx="70" ry="14" fill="#000" opacity=".25"/>
         <path d="M40 160 Q30 100 60 70 Q100 40 140 70 Q170 100 160 160 Z" fill="#8a5a34"/>
         <ellipse cx="100" cy="100" rx="34" ry="14" fill="#3a2313"/>
@@ -197,69 +215,72 @@ nav{position:sticky; top:0; z-index:70; backdrop-filter:blur(10px); background:r
     </div>
   </div>
 </section>
-<style>@media(min-width:800px){#chulhaGrid{grid-template-columns:1fr 1fr;}}</style>
+<style>@media(min-width:800px){#chulhaGrid{grid-template-columns:1fr 1fr;} .chulha-text{order:1;} .chulha-img{order:2;}}</style>
 
-<!-- WHAT'S ON THE PLATE -->
-<section id="plate">
+<!-- MADE LIKE HOME -->
+<section>
   <div class="wrap">
-    <p class="eyebrow" style="text-align:center;">The Full Thali</p>
-    <h2 class="display" style="text-align:center; font-size:clamp(26px,4vw,36px); font-weight:600; margin:10px 0 10px;">What's on the Plate?</h2>
-    <p style="text-align:center; color:#5c4636; max-width:440px; margin:0 auto 40px;">Everything you need for a traditional Rajasthani meal.</p>
-
-    <div class="thali-wrap" style="max-width:340px; margin:0 auto 48px;">
-      <div class="plate">
-        <div class="bowl bowl-dal"></div>
-        <div class="baati b1"></div><div class="baati b2"></div><div class="baati b3"></div>
-        <div class="churma"></div>
-        <div class="dab chutney"></div>
-        <div class="dab pickle"></div>
-        <div class="dab salad" style="background:radial-gradient(circle at 35% 30%,#dff0b8,#7c9a52 70%); top:10%; left:14%;"></div>
-        <div class="dab ghee-bowl" style="background:radial-gradient(circle at 35% 30%,#fff6d9,#e9c05a 70%); bottom:32%; left:8%;"></div>
-        <div class="ghee"></div>
-        <div class="steam" style="left:44%; bottom:52%; height:22px;"></div>
-        <div class="steam" style="left:50%; bottom:50%; height:16px; animation-delay:1s;"></div>
+    <p class="eyebrow" style="text-align:center;">Made Like Home</p>
+    <h2 class="display" style="text-align:center; font-size:clamp(26px,4vw,34px); font-weight:600; margin:10px 0 44px;">Traditional Rajasthani flavours, freshly prepared with love</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:24px;">
+      <div class="card reveal" style="padding:28px;">
+        <span style="font-size:28px;" aria-hidden="true">🔥</span>
+        <h3 style="font-size:17px; margin:14px 0 6px;">Slow-Cooked Dal</h3><p style="font-size:14px; color:#5c4636;">Rich, comforting and full of flavour.</p>
+      </div>
+      <div class="card reveal" style="padding:28px;">
+        <span style="font-size:28px;" aria-hidden="true">🫓</span>
+        <h3 style="font-size:17px; margin:14px 0 6px;">Golden Baati</h3><p style="font-size:14px; color:#5c4636;">Baked until crisp outside and soft inside.</p>
+      </div>
+      <div class="card reveal" style="padding:28px;">
+        <span style="font-size:28px;" aria-hidden="true">🍯</span>
+        <h3 style="font-size:17px; margin:14px 0 6px;">Fresh Churma</h3><p style="font-size:14px; color:#5c4636;">Sweet, aromatic and prepared fresh.</p>
+      </div>
+      <div class="card reveal" style="padding:28px;">
+        <span style="font-size:28px;" aria-hidden="true">🧈</span>
+        <h3 style="font-size:17px; margin:14px 0 6px;">Desi Ghee</h3><p style="font-size:14px; color:#5c4636;">Served generously, just the way it should be.</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="plate-grid">
-      <div class="plate-chip reveal"><span class="chip-emoji">🥣</span><h3>Dal</h3><p>Rich &amp; comforting</p></div>
-      <div class="plate-chip reveal"><span class="chip-emoji">🫓</span><h3>Baati</h3><p>Golden &amp; crispy</p></div>
-      <div class="plate-chip reveal"><span class="chip-emoji">🍯</span><h3>Churma</h3><p>Sweet &amp; aromatic</p></div>
-      <div class="plate-chip reveal"><span class="chip-emoji">🌶️</span><h3>Garlic Chutney</h3><p>Bold &amp; traditional</p></div>
-      <div class="plate-chip reveal"><span class="chip-emoji">🥭</span><h3>Pickle</h3><p>Classic Rajasthani touch</p></div>
-      <div class="plate-chip reveal"><span class="chip-emoji">🥗</span><h3>Fresh Salad</h3><p>Crisp &amp; refreshing</p></div>
-      <div class="plate-chip reveal"><span class="chip-emoji">🧈</span><h3>Desi Ghee</h3><p>Generously served</p></div>
+<!-- THE FULL THALI / ORDER -->
+<section id="thali" style="background:var(--cream2);">
+  <div class="wrap" style="display:flex; justify-content:center;">
+    <div class="card reveal" style="max-width:440px; width:100%; padding:40px; text-align:center;">
+      <p style="font-size:14px; font-weight:600; color:var(--terracotta); margin:0 0 8px;">AUTHENTIC RAJASTHANI</p>
+      <h2 class="display" style="font-size:26px; margin:0 0 4px;">Dal Baati Churma</h2>
+      <div class="price-big"><span class="amt">₹249</span><span class="unit">/ PLATE</span></div>
+      <ul class="included-list">
+        <li>✓ Dal</li><li>✓ Baati</li><li>✓ Churma</li>
+        <li>✓ Garlic Chutney</li><li>✓ Pickle</li><li>✓ Fresh Salad</li><li>✓ Desi Ghee</li>
+      </ul>
+      <div class="qty-row">
+        <button class="qty-btn" onclick="changeQty(-1)" aria-label="Decrease quantity">−</button>
+        <span class="qtyVal" style="font-weight:700; font-size:20px; min-width:20px;">1</span>
+        <button class="qty-btn" onclick="changeQty(1)" aria-label="Increase quantity">+</button>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-top:1px solid var(--line); margin-bottom:18px;">
+        <span style="font-weight:600;">Total</span>
+        <span class="totalAmt display" style="font-size:22px; font-weight:600;">₹249</span>
+      </div>
+      <button class="btn btn-primary" style="width:100%; padding:16px 30px; margin-bottom:10px;" onclick="orderOnWhatsApp()">Order on WhatsApp</button>
+      <a class="btn btn-outline" style="width:100%; padding:16px 30px;" href="tel:6355538898">Call 6355538898</a>
+      <p style="font-size:12.5px; color:#8a725f; margin:14px 0 0;">Order via WhatsApp for availability and delivery details.</p>
     </div>
   </div>
 </section>
 
 <!-- HOW TO ORDER -->
-<section id="order-steps" style="background:var(--cream2);">
+<section id="order-steps">
   <div class="wrap" style="text-align:center;">
     <h2 class="display" style="font-size:clamp(26px,4vw,34px); font-weight:600; margin-bottom:44px;">How To Order</h2>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:28px; margin-bottom:40px;">
-      <div><p class="eyebrow" style="font-size:26px; font-family:'Fraunces',serif;">01</p><h3 style="font-size:17px;">Choose Your Plate</h3></div>
-      <div><p class="eyebrow" style="font-size:26px; font-family:'Fraunces',serif;">02</p><h3 style="font-size:17px;">Place Your Order</h3></div>
-      <div><p class="eyebrow" style="font-size:26px; font-family:'Fraunces',serif;">03</p><h3 style="font-size:17px;">Enjoy Ghar Ka Swad</h3></div>
+      <div><p class="eyebrow" style="font-size:26px; font-family:'Fraunces',serif;">01</p><h3 style="font-size:17px; margin:0 0 6px;">Choose Quantity</h3><p style="font-size:14px; color:#5c4636;">Select how many plates you want.</p></div>
+      <div><p class="eyebrow" style="font-size:26px; font-family:'Fraunces',serif;">02</p><h3 style="font-size:17px; margin:0 0 6px;">Order on WhatsApp</h3><p style="font-size:14px; color:#5c4636;">Confirm your order and delivery details.</p></div>
+      <div><p class="eyebrow" style="font-size:26px; font-family:'Fraunces',serif;">03</p><h3 style="font-size:17px; margin:0 0 6px;">Enjoy Ghar Ka Swad</h3><p style="font-size:14px; color:#5c4636;">Fresh Dal Baati Churma, made with care.</p></div>
     </div>
     <button class="btn btn-primary" onclick="openModal()">Order Now</button>
     <p style="margin-top:14px; color:#5c4636;">or call <a href="tel:6355538898" style="font-weight:600; color:var(--brown);">6355538898</a></p>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section>
-  <div class="wrap" style="display:flex; justify-content:center;">
-    <div class="card reveal" style="max-width:420px; width:100%; padding:40px; text-align:center;">
-      <p style="font-size:14px; font-weight:600; color:var(--terracotta); margin:0 0 8px;">AUTHENTIC RAJASTHANI</p>
-      <h3 class="display" style="font-size:24px; margin:0 0 18px;">Dal Baati Churma</h3>
-      <div style="margin-bottom:22px;"><span class="display" style="font-size:52px; font-weight:600;">₹249</span><br><span style="color:#8a725f; font-size:14px;">/ PLATE</span></div>
-      <ul style="list-style:none; padding:0; margin:0 0 26px; text-align:left; display:inline-block;">
-        <li style="padding:6px 0;">✓ Dal</li><li style="padding:6px 0;">✓ Baati</li><li style="padding:6px 0;">✓ Churma</li>
-        <li style="padding:6px 0;">✓ Garlic Chutney</li><li style="padding:6px 0;">✓ Pickle</li><li style="padding:6px 0;">✓ Traditional Accompaniments</li>
-      </ul><br>
-      <button class="btn btn-primary" style="width:100%;" onclick="openModal()">Order Now</button>
-    </div>
   </div>
 </section>
 
@@ -267,12 +288,12 @@ nav{position:sticky; top:0; z-index:70; backdrop-filter:blur(10px); background:r
 <section id="story" style="background:var(--cream2);">
   <div class="wrap" style="display:grid; grid-template-columns:1fr; gap:44px; align-items:center;" id="storyGrid">
     <div>
-      <p class="eyebrow">Why Ghar Ka Chulha?</p>
+      <p class="eyebrow">Why Rasodu Chulha?</p>
       <h2 class="display" style="font-size:clamp(26px,4vw,34px); font-weight:600; margin:10px 0 16px;">Because some food doesn't just fill your stomach — it takes you home.</h2>
-      <p style="color:#5c4636; line-height:1.8;">Ghar Ka Chulha brings the warmth of traditional Rajasthani cooking to your plate, with food prepared the way it is made at home — simply, generously and with heart.</p>
+      <p style="color:#5c4636; line-height:1.8;">Rasodu Chulha brings the warmth of traditional Rajasthani cooking to your plate, with food prepared the way it is made at home — simply, generously and with heart.</p>
     </div>
     <div style="display:flex; justify-content:center;">
-      <svg width="260" height="220" viewBox="0 0 200 170">
+      <svg width="260" height="220" viewBox="0 0 200 170" role="img" aria-label="Illustration of two pots cooking on a traditional stove">
         <rect x="20" y="40" width="160" height="110" rx="10" fill="#8a5a34"/>
         <rect x="20" y="40" width="160" height="14" rx="6" fill="#6e4527"/>
         <circle cx="60" cy="95" r="26" fill="#3a2313"/>
@@ -285,33 +306,11 @@ nav{position:sticky; top:0; z-index:70; backdrop-filter:blur(10px); background:r
 </section>
 <style>@media(min-width:800px){#storyGrid{grid-template-columns:1.1fr 1fr;}}</style>
 
-<!-- TESTIMONIALS -->
+<!-- MADE FRESH -->
 <section>
-  <div class="wrap">
-    <h2 class="display" style="text-align:center; font-size:clamp(24px,4vw,32px); font-weight:600; margin-bottom:40px;">What People Say</h2>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px;">
-      <div class="card reveal" style="padding:26px;"><p style="color:var(--saffron); margin:0 0 10px;">★★★★★</p><p style="font-style:italic; color:#4a3624; margin:0 0 14px;">"The baati was perfectly crisp and the dal tasted just like homemade food."</p><p style="font-size:13px; color:#8a725f;">— Customer</p></div>
-      <div class="card reveal" style="padding:26px;"><p style="color:var(--saffron); margin:0 0 10px;">★★★★★</p><p style="font-style:italic; color:#4a3624; margin:0 0 14px;">"Reminded me of my grandmother's cooking. Generous portions too."</p><p style="font-size:13px; color:#8a725f;">— Customer</p></div>
-      <div class="card reveal" style="padding:26px;"><p style="color:var(--saffron); margin:0 0 10px;">★★★★★</p><p style="font-style:italic; color:#4a3624; margin:0 0 14px;">"Ordered for a family get-together, everyone loved the churma."</p><p style="font-size:13px; color:#8a725f;">— Customer</p></div>
-    </div>
-    <p style="text-align:center; font-size:12px; color:#8a725f; margin-top:20px;">Placeholder reviews — to be replaced with real customer feedback.</p>
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section style="background:var(--cream2);">
-  <div class="wrap">
-    <h2 class="display" style="text-align:center; font-size:clamp(24px,4vw,32px); font-weight:600; margin-bottom:40px;">A Taste of Home</h2>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:14px;">
-      <div class="gallery-tile reveal" style="background:radial-gradient(circle at 35% 30%,#f2c14e,#a8631a);"></div>
-      <div class="gallery-tile reveal" style="background:radial-gradient(circle at 35% 30%,#f4d59a,#97652a);"></div>
-      <div class="gallery-tile reveal" style="background:radial-gradient(circle at 35% 30%,#f6e2ad,#a8631a);"></div>
-      <div class="gallery-tile reveal" style="background:radial-gradient(circle at 35% 30%,#e0c98a,#6e4527);"></div>
-      <div class="gallery-tile reveal" style="background:radial-gradient(circle at 35% 30%,#cfe0a8,#66754A);"></div>
-      <div class="gallery-tile reveal" style="background:radial-gradient(circle at 35% 30%,#f0d9a0,#b8894a);"></div>
-      <div class="gallery-tile reveal" style="background:radial-gradient(circle at 35% 30%,#e8825a,#a3401d);"></div>
-      <div class="gallery-tile reveal" style="background:#3a2313;"></div>
-    </div>
+  <div class="wrap" style="text-align:center;">
+    <h2 class="display" style="font-size:clamp(24px,4vw,32px); font-weight:600; margin:0 0 10px;">Made Fresh. Served With Love.</h2>
+    <p style="color:#5c4636; max-width:440px; margin:0 auto;">Every plate of Dal Baati Churma is prepared fresh to order, the way it's made at home.</p>
   </div>
 </section>
 
@@ -329,15 +328,20 @@ nav{position:sticky; top:0; z-index:70; backdrop-filter:blur(10px); background:r
 </section>
 
 <!-- FOOTER -->
-<footer style="background:var(--brown-dk); color:#d8c6b0; padding:44px 0 calc(90px + env(safe-area-inset-bottom,0px));">
+<footer style="background:var(--brown-dk); color:#d8c6b0; padding:44px 0 calc(100px + env(safe-area-inset-bottom,0px));">
   <div class="wrap" style="display:flex; flex-wrap:wrap; gap:24px; align-items:center; justify-content:space-between;">
     <div>
-      <p class="display" style="color:#fff; font-size:19px; font-weight:600; margin:0;">Ghar Ka Chulha</p>
+      <p class="display" style="color:#fff; font-size:19px; font-weight:600; margin:0;">Rasodu Chulha</p>
       <p style="margin:4px 0 0; font-size:14px;">Ghar Jaisa Swad, Dil Se Bana</p>
-      <p style="margin:4px 0 0; font-size:14px;">6355538898</p>
+      <p style="margin:4px 0 0; font-size:14px;"><a href="tel:6355538898">6355538898</a></p>
+      <p style="margin:4px 0 0; font-size:14px;"><a href="https://www.instagram.com/rasoduchulha/" target="_blank" rel="noopener">Instagram</a></p>
     </div>
     <div style="display:flex; gap:20px; font-size:14px;">
-      <a href="#top">Home</a><a href="#menu">Menu</a><a href="#story">Our Story</a><a href="#order-steps">Order</a>
+      <a href="#top">Home</a><a href="#plate">Menu</a><a href="#story">Our Story</a><a href="#thali">Order</a>
+    </div>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <span style="font-weight:600;">₹249 / Plate</span>
+      <button class="btn btn-primary" style="padding:10px 20px;" onclick="openModal()">Order Now</button>
     </div>
   </div>
 </footer>
@@ -345,62 +349,75 @@ nav{position:sticky; top:0; z-index:70; backdrop-filter:blur(10px); background:r
 <!-- MOBILE STICKY BAR -->
 <div class="mobile-bar">
   <div><div style="font-size:12px; opacity:.75;">₹249 / Plate</div><a href="tel:6355538898" style="font-size:13px; font-weight:600;">6355538898</a></div>
-  <button class="btn btn-primary" style="padding:11px 24px;" onclick="openModal()">Order Now</button>
+  <button class="btn btn-primary" style="padding:13px 26px; font-size:16px;" onclick="openModal()">Order Now</button>
 </div>
 
 <!-- WHATSAPP FAB -->
-<a class="wa-fab" target="_blank" href="https://wa.me/916355538898?text=Hi%2C%20I%20would%20like%20to%20order%20Dal%20Baati%20Churma%20from%20Ghar%20Ka%20Chulha.">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1112 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7.9-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5s-.5-1.3-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9 0 1.1.8 2.2.9 2.4.1.2 1.6 2.5 3.9 3.4.5.2 1 .4 1.3.5.5.2 1 .1 1.4.1.4-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"/></svg>
+<a class="wa-fab" target="_blank" rel="noopener" aria-label="Order on WhatsApp" href="https://wa.me/916355538898?text=Hi%2C%20I%20would%20like%20to%20order%20Dal%20Baati%20Churma%20from%20Rasodu%20Chulha.">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1112 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7.9-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5s-.5-1.3-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9 0 1.1.8 2.2.9 2.4.1.2 1.6 2.5 3.9 3.4.5.2 1 .4 1.3.5.5.2 1 .1 1.4.1.4-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"/></svg>
 </a>
 
 <!-- ORDER MODAL -->
 <div id="orderModal">
-  <div class="modal-panel">
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:18px;">
-      <h3 class="display" style="font-size:20px; margin:0;">Place Your Order</h3>
-      <button onclick="closeModal()" style="background:none; border:none; font-size:22px; cursor:pointer; color:var(--brown);">&times;</button>
+      <h3 id="modalTitle" class="display" style="font-size:20px; margin:0;">Dal Baati Churma</h3>
+      <button onclick="closeModal()" aria-label="Close" style="background:none; border:none; font-size:24px; cursor:pointer; color:var(--brown); padding:4px;">&times;</button>
     </div>
-    <div style="display:flex; align-items:center; justify-content:space-between; background:var(--cream2); border-radius:14px; padding:14px 16px; margin-bottom:18px;">
-      <div>
-        <p class="display" style="font-weight:600; font-size:17px; margin:0;">Dal Baati Churma</p>
-        <p style="font-size:13px; color:#8a725f; margin:2px 0 0;">₹249 / Plate</p>
-      </div>
-      <div style="display:flex; align-items:center; gap:14px;">
-        <button class="qty-btn" onclick="changeQty(-1)" aria-label="Decrease quantity">−</button>
-        <span id="qtyVal" style="font-weight:700; font-size:18px; min-width:16px; text-align:center;">1</span>
-        <button class="qty-btn" onclick="changeQty(1)" aria-label="Increase quantity">+</button>
-      </div>
+    <p style="font-size:14px; color:#8a725f; margin:0 0 20px;">₹249 / Plate</p>
+    <div class="qty-row" style="justify-content:flex-start;">
+      <button class="qty-btn" onclick="changeQty(-1)" aria-label="Decrease quantity">−</button>
+      <span class="qtyVal" style="font-weight:700; font-size:20px; min-width:20px; text-align:center;">1</span>
+      <button class="qty-btn" onclick="changeQty(1)" aria-label="Increase quantity">+</button>
     </div>
-    <div class="field"><label>Name</label><input id="ordName" type="text" placeholder="Your name"></div>
-    <div class="field"><label>Phone Number</label><input id="ordPhone" type="tel" placeholder="10-digit mobile number"></div>
-    <div class="field"><label>Delivery Address</label><textarea id="ordAddr" rows="2" placeholder="Flat / House no., street, area"></textarea></div>
-    <div class="field"><label>Instructions (optional)</label><input id="ordNote" type="text" placeholder="Any special request"></div>
-    <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-top:1px solid var(--line); margin-bottom:16px;">
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:16px 0; border-top:1px solid var(--line); margin-bottom:18px;">
       <span style="font-weight:600;">Total</span>
-      <span id="totalAmt" class="display" style="font-size:24px; font-weight:600;">₹249</span>
+      <span class="totalAmt display" style="font-size:24px; font-weight:600;">₹249</span>
     </div>
-    <button class="btn btn-primary" style="width:100%; padding:17px 30px;" onclick="placeOrder()">Order on WhatsApp</button>
+    <button class="btn btn-primary" style="width:100%; padding:17px 30px; margin-bottom:10px;" onclick="orderOnWhatsApp()">Order on WhatsApp</button>
+    <a class="btn btn-outline" style="width:100%; padding:17px 30px;" href="tel:6355538898">Call 6355538898</a>
   </div>
 </div>
 
 <script>
 let qty = 1;
 const PRICE = 249;
-function changeQty(d){ qty = Math.max(1, qty + d); document.getElementById('qtyVal').textContent = qty; document.getElementById('totalAmt').textContent = '₹' + (qty*PRICE); }
-function openModal(){ document.getElementById('orderModal').classList.add('open'); }
-function closeModal(){ document.getElementById('orderModal').classList.remove('open'); }
-function placeOrder(){
-  const name = document.getElementById('ordName').value.trim();
-  const phone = document.getElementById('ordPhone').value.trim();
-  const addr = document.getElementById('ordAddr').value.trim();
-  const note = document.getElementById('ordNote').value.trim();
-  if(!name || !phone || !addr){ alert('Please fill in your name, phone number and address.'); return; }
+const MIN_QTY = 1, MAX_QTY = 20;
+
+function updateTotals(){
+  document.querySelectorAll('.qtyVal').forEach(el=> el.textContent = qty);
+  document.querySelectorAll('.totalAmt').forEach(el=> el.textContent = '₹' + (qty*PRICE));
+}
+function changeQty(d){ qty = Math.min(MAX_QTY, Math.max(MIN_QTY, qty + d)); updateTotals(); }
+
+function openModal(){
+  document.getElementById('orderModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(){
+  document.getElementById('orderModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function orderOnWhatsApp(){
   const total = qty * PRICE;
-  let msg = `Hi, I would like to order from GHAR KA CHULHA.%0A%0ADal Baati Churma%0AQuantity: ${qty}%0ATotal: ₹${total}%0A%0AName: ${name}%0APhone: ${phone}%0AAddress: ${addr}%0A`;
-  if(note) msg += `Instructions: ${note}%0A`;
+  const plateWord = qty > 1 ? 'plates' : 'plate';
+  const msg = `Hi, I would like to order ${qty} ${plateWord} of Dal Baati Churma from Rasodu Chulha.%0A%0ATotal: ₹${total}%0A%0APlease share the next steps.`;
   window.open(`https://wa.me/916355538898?text=${msg}`, '_blank');
 }
+
 document.getElementById('orderModal').addEventListener('click', e=>{ if(e.target.id==='orderModal') closeModal(); });
+document.addEventListener('keydown', e=>{ if(e.key === 'Escape') closeModal(); });
+
+function toggleNav(){
+  const panel = document.getElementById('navMobilePanel');
+  const btn = document.querySelector('.hamburger');
+  const isOpen = panel.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen);
+}
+function closeNav(){
+  document.getElementById('navMobilePanel').classList.remove('open');
+  document.querySelector('.hamburger').setAttribute('aria-expanded', 'false');
+}
 
 const io = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); }); }, {threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
